@@ -1,0 +1,213 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 22px 16px 16px;
+  background: linear-gradient(180deg, rgba(10, 15, 23, 0.9), rgba(7, 11, 17, 0.8));
+}
+
+.brand-block {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 6px 8px 10px;
+}
+
+.brand-mark {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(115, 216, 255, 0.18), rgba(124, 103, 255, 0.18));
+  border: 1px solid rgba(130, 179, 255, 0.28);
+  box-shadow: inset 0 0 18px rgba(115, 216, 255, 0.14), 0 0 24px rgba(77, 141, 255, 0.12);
+}
+
+.brand-core {
+  position: relative;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+  box-shadow: 0 0 16px rgba(115, 216, 255, 0.66);
+}
+
+.brand-core::before,
+.brand-core::after {
+  content: "";
+  position: absolute;
+  inset: -7px;
+  border-radius: 50%;
+  border: 1px solid rgba(115, 216, 255, 0.28);
+}
+
+.brand-core::after {
+  inset: -14px;
+  border-color: rgba(124, 103, 255, 0.18);
+}
+
+.brand-text {
+  flex: 1;
+}
+
+.brand-text h1 {
+  margin: 0;
+  font-size: 1.45rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+.brand-text p {
+  margin: 4px 0 0;
+  color: var(--text-soft);
+  font-size: 0.74rem;
+}
+
+.new-chat-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(77, 141, 255, 0.18), rgba(124, 103, 255, 0.18));
+  border: 1px solid rgba(126, 165, 255, 0.25);
+  color: var(--text-primary);
+  font-weight: 600;
+  transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+}
+
+.new-chat-btn:hover,
+.nav-item:hover,
+.recent-item:hover,
+.icon-button:hover,
+.tool-button:hover,
+.send-button:hover,
+.suggestion-card:hover {
+  transform: translateY(-1px);
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-glow);
+}
+
+.sidebar-nav,
+.sidebar-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  color: var(--text-secondary);
+  border: 1px solid transparent;
+  transition: background var(--transition), border-color var(--transition), color var(--transition), transform var(--transition);
+}
+
+.nav-item i {
+  font-size: 1.05rem;
+}
+
+.nav-item.active {
+  background: rgba(116, 176, 255, 0.08);
+  color: var(--text-primary);
+  border-color: rgba(132, 168, 255, 0.2);
+}
+
+.section-heading {
+  padding: 2px 8px 6px;
+  color: var(--text-soft);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.recent-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.recent-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  color: var(--text-secondary);
+  text-align: left;
+  background: rgba(255, 255, 255, 0.01);
+}
+
+.recent-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+  box-shadow: 0 0 12px rgba(115, 216, 255, 0.8);
+}
+
+.settings-item {
+  margin-top: auto;
+}
+
+.user-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 10px;
+  margin-top: 8px;
+  border-radius: 16px;
+  background: rgba(17, 24, 34, 0.75);
+}
+
+.user-avatar {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(115, 216, 255, 0.35), rgba(124, 103, 255, 0.35));
+  border: 1px solid rgba(135, 176, 255, 0.4);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  flex: 1;
+}
+
+.user-info strong {
+  font-size: 0.95rem;
+}
+
+.user-info span {
+  color: var(--text-soft);
+  font-size: 0.72rem;
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: rgba(81, 212, 169, 0.12);
+  color: var(--success);
+  border: 1px solid rgba(81, 212, 169, 0.25);
+  font-size: 0.7rem;
+  font-weight: 600;
+}

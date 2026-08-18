@@ -1,0 +1,108 @@
+:root {
+  --bg-primary: #04070d;
+  --bg-secondary: #0b1220;
+  --bg-panel: rgba(12, 18, 28, 0.8);
+  --bg-soft: rgba(17, 23, 33, 0.8);
+  --bg-elevated: rgba(19, 27, 39, 0.9);
+  --border-primary: rgba(143, 173, 255, 0.18);
+  --border-strong: rgba(109, 175, 255, 0.35);
+  --text-primary: #edf4ff;
+  --text-secondary: #a6b5d8;
+  --text-soft: #7d8ab0;
+  --accent-cyan: #73d8ff;
+  --accent-blue: #4d8dff;
+  --accent-indigo: #7c67ff;
+  --accent-purple: #9c7dff;
+  --success: #51d4a9;
+  --warning: #ffc857;
+  --danger: #ff6b8a;
+  --shadow-soft: 0 16px 32px rgba(1, 6, 18, 0.54);
+  --shadow-glow: 0 0 0 1px rgba(116, 176, 255, 0.2), 0 18px 40px rgba(31, 71, 136, 0.25);
+  --radius-xl: 24px;
+  --radius-lg: 18px;
+  --radius-md: 12px;
+  --radius-sm: 10px;
+  --transition: 0.25s ease;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(77, 141, 255, 0.12), transparent 25%),
+    radial-gradient(circle at bottom right, rgba(124, 103, 255, 0.1), transparent 25%),
+    linear-gradient(180deg, #03070c 0%, var(--bg-primary) 100%);
+  color: var(--text-primary);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  border: 0;
+  background: none;
+  color: inherit;
+}
+
+textarea {
+  resize: none;
+  overflow: hidden;
+}
+
+.app-shell {
+  display: grid;
+  grid-template-columns: 290px minmax(0, 1fr) 300px;
+  gap: 18px;
+  width: min(1600px, calc(100vw - 40px));
+  min-height: calc(100vh - 32px);
+  margin: 16px auto;
+  padding: 0;
+}
+
+.glass-panel {
+  background: linear-gradient(180deg, rgba(14, 20, 30, 0.82), rgba(9, 15, 22, 0.78));
+  border: 1px solid var(--border-primary);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.sidebar,
+.main-panel,
+.intel-panel {
+  border-radius: var(--radius-xl);
+}
+
+.main-panel {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  background: rgba(9, 14, 21, 0.76);
+  border: 1px solid var(--border-primary);
+  box-shadow: var(--shadow-soft);
+}
+
+.content-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
+  padding: 18px 18px 0;
+}
+
+.hidden {
+  display: none !important;
+}

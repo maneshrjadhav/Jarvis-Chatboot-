@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="JARVIS AI - Premium intelligent digital assistant interface"
+    />
+    <title>JARVIS AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/sidebar.css" />
+    <link rel="stylesheet" href="./css/chat.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar glass-panel" id="sidebar">
+        <div class="brand-block">
+          <div class="brand-mark" aria-hidden="true">
+            <span class="brand-core"></span>
+          </div>
+          <div class="brand-text">
+            <h1>JARVIS AI</h1>
+            <p>Intelligent Digital Assistant</p>
+          </div>
+        </div>
+
+        <button type="button" class="new-chat-btn" id="new-chat-btn">
+          <i class="bi bi-plus-lg"></i>
+          <span>New Chat</span>
+        </button>
+
+        <nav class="sidebar-nav" aria-label="Main navigation">
+          <button type="button" class="nav-item active">
+            <i class="bi bi-house-door"></i>
+            <span>Home</span>
+          </button>
+          <button type="button" class="nav-item">
+            <i class="bi bi-chat-left-text"></i>
+            <span>Conversations</span>
+          </button>
+          <button type="button" class="nav-item">
+            <i class="bi bi-kanban"></i>
+            <span>Projects</span>
+          </button>
+          <button type="button" class="nav-item">
+            <i class="bi bi-star"></i>
+            <span>Favorites</span>
+          </button>
+        </nav>
+
+        <div class="sidebar-section">
+          <div class="section-heading">Recent Chats</div>
+          <div class="recent-list">
+            <button type="button" class="recent-item">
+              <span class="recent-dot"></span>
+              Strategic AI roadmap
+            </button>
+            <button type="button" class="recent-item">
+              <span class="recent-dot"></span>
+              Product testing brief
+            </button>
+            <button type="button" class="recent-item">
+              <span class="recent-dot"></span>
+              System architecture
+            </button>
+          </div>
+        </div>
+
+        <div class="sidebar-section settings-item">
+          <button type="button" class="nav-item settings-link">
+            <i class="bi bi-gear"></i>
+            <span>Settings</span>
+          </button>
+        </div>
+
+        <div class="user-card glass-panel">
+          <div class="user-avatar">M</div>
+          <div class="user-info">
+            <strong>Manesh</strong>
+            <span>Workspace admin</span>
+          </div>
+          <span class="status-pill">Online</span>
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar glass-panel">
+          <div class="topbar-left">
+            <button type="button" class="icon-button mobile-toggle" id="mobile-sidebar-toggle" aria-label="Toggle sidebar">
+              <i class="bi bi-list"></i>
+            </button>
+            <div class="brand-inline">
+              <span class="brand-dot"></span>
+              <span class="brand-name">JARVIS AI</span>
+            </div>
+          </div>
+
+          <div class="topbar-center">
+            <span class="online-status">
+              <span class="status-signal"></span>
+              Online
+            </span>
+          </div>
+
+          <div class="topbar-actions">
+            <label class="model-selector" aria-label="Select AI model">
+              <span class="selector-label">Model</span>
+              <select id="model-select">
+                <option value="JARVIS Advanced">JARVIS Advanced</option>
+                <option value="JARVIS Core">JARVIS Core</option>
+                <option value="JARVIS Vision">JARVIS Vision</option>
+              </select>
+            </label>
+
+            <button type="button" class="icon-button" id="search-btn" aria-label="Search conversations">
+              <i class="bi bi-search"></i>
+            </button>
+            <button type="button" class="icon-button" id="share-btn" aria-label="Share session">
+              <i class="bi bi-share"></i>
+            </button>
+            <button type="button" class="icon-button" id="more-btn" aria-label="Open more options">
+              <i class="bi bi-three-dots"></i>
+            </button>
+          </div>
+        </header>
+
+        <div class="content-body">
+          <section class="welcome-screen" id="welcome-screen" aria-label="Welcome screen">
+            <div class="core-orb" aria-hidden="true">
+              <span class="ring ring-one"></span>
+              <span class="ring ring-two"></span>
+              <span class="ring ring-three"></span>
+              <span class="orb-center"></span>
+            </div>
+
+            <div class="welcome-copy">
+              <h2>Good morning, Manesh.</h2>
+              <h3>How can I assist you today?</h3>
+              <p>I'm JARVIS, your intelligent digital assistant.</p>
+            </div>
+
+            <div class="suggestion-grid">
+              <button type="button" class="suggestion-card" data-query="Build something">
+                <span class="icon-wrap"><i class="bi bi-lightbulb"></i></span>
+                <span>Build something</span>
+              </button>
+              <button type="button" class="suggestion-card" data-query="Learn something">
+                <span class="icon-wrap"><i class="bi bi-book"></i></span>
+                <span>Learn something</span>
+              </button>
+              <button type="button" class="suggestion-card" data-query="Analyze files">
+                <span class="icon-wrap"><i class="bi bi-file-earmark-text"></i></span>
+                <span>Analyze files</span>
+              </button>
+              <button type="button" class="suggestion-card" data-query="Plan & create">
+                <span class="icon-wrap"><i class="bi bi-clipboard-check"></i></span>
+                <span>Plan &amp; create</span>
+              </button>
+            </div>
+          </section>
+
+          <section class="chat-panel" aria-label="Chat area">
+            <div class="chat-thread" id="chat-thread" aria-live="polite"></div>
+            <div class="typing-indicator hidden" id="typing-indicator" aria-live="polite">
+              <div class="typing-bubble">
+                <span class="avatar-pill">J</span>
+                <span class="typing-dots">
+                  <i></i>
+                  <i></i>
+                  <i></i>
+                </span>
+              </div>
+            </div>
+          </section>
+
+          <form class="composer glass-panel" id="chat-form" novalidate>
+            <div class="composer-tools left-tools">
+              <button type="button" class="tool-button" id="attach-btn" aria-label="Attach a file">
+                <i class="bi bi-paperclip"></i>
+              </button>
+            </div>
+
+            <label class="composer-field" for="message-input">
+              <textarea id="message-input" rows="1" placeholder="Ask JARVIS anything..." aria-label="Message input"></textarea>
+            </label>
+
+            <div class="composer-tools right-tools">
+              <button type="button" class="tool-button" id="voice-btn" aria-label="Voice input">
+                <i class="bi bi-mic"></i>
+              </button>
+              <button type="submit" class="send-button" id="send-btn" aria-label="Send message">
+                <i class="bi bi-arrow-up"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+      </main>
+
+      <aside class="intel-panel glass-panel" id="intel-panel" aria-label="JARVIS intelligence panel">
+        <div class="panel-header">
+          <div class="panel-title-wrap">
+            <span class="panel-chip"></span>
+            <h3>JARVIS Intelligence</h3>
+          </div>
+          <button type="button" class="panel-toggle" id="panel-toggle" aria-label="Toggle intelligence panel">
+            <i class="bi bi-chevron-right"></i>
+          </button>
+        </div>
+
+        <div class="panel-body">
+          <div class="intel-card">
+            <div class="card-label">System status</div>
+            <div class="status-text">All Systems Operational</div>
+          </div>
+
+          <div class="intel-card">
+            <div class="card-label">AI Model</div>
+            <div class="status-text active-model" id="active-model">JARVIS Advanced</div>
+          </div>
+
+          <div class="intel-card">
+            <div class="card-label">Active Tools</div>
+            <ul class="tool-list">
+              <li>Web Search</li>
+              <li>Code Assistant</li>
+              <li>File Analysis</li>
+              <li>Voice Assistant</li>
+            </ul>
+          </div>
+
+          <div class="intel-card session-card">
+            <div class="card-label">Session</div>
+            <div class="session-grid">
+              <div class="session-stat">
+                <span>Messages</span>
+                <strong id="message-count">0</strong>
+              </div>
+              <div class="session-stat">
+                <span>Context</span>
+                <strong>High</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/api.js"></script>
+    <script src="./js/chat.js"></script>
+    <script src="./js/app.js"></script>
+  </body>
+</html>
